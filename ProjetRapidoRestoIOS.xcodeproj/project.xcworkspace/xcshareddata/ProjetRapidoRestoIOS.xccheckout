@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4FF139B-FDE9-4C0D-81C5-B25C0EDE6416</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ProjetRapidoRestoIOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2EF4D3751BAB6D56BAC8A1FE8D90DC8A8D060FB5</key>
+		<string>https://github.com/OtisDave/ProjetRestoRapidoIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ProjetRapidoRestoIOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2EF4D3751BAB6D56BAC8A1FE8D90DC8A8D060FB5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/OtisDave/ProjetRestoRapidoIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2EF4D3751BAB6D56BAC8A1FE8D90DC8A8D060FB5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2EF4D3751BAB6D56BAC8A1FE8D90DC8A8D060FB5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ProjetRestoRapidoIOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

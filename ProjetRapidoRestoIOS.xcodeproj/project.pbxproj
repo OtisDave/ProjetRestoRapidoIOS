@@ -13,6 +13,10 @@
 		97721B721C6E260600ED4914 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97721B711C6E260600ED4914 /* Images.xcassets */; };
 		97721B751C6E260600ED4914 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97721B731C6E260600ED4914 /* LaunchScreen.xib */; };
 		97721B811C6E260700ED4914 /* ProjetRapidoRestoIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97721B801C6E260700ED4914 /* ProjetRapidoRestoIOSTests.swift */; };
+		D67F524A1C8099860091149A /* PanierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F52491C8099860091149A /* PanierController.swift */; };
+		D67F52521C80A5920091149A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F52511C80A5920091149A /* MenuTableViewCell.swift */; };
+		D67F52541C80A80E0091149A /* Repas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F52531C80A80E0091149A /* Repas.swift */; };
+		D67F52561C80AE1F0091149A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F52551C80AE1F0091149A /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		97721B7A1C6E260600ED4914 /* ProjetRapidoRestoIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetRapidoRestoIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97721B7F1C6E260600ED4914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97721B801C6E260700ED4914 /* ProjetRapidoRestoIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetRapidoRestoIOSTests.swift; sourceTree = "<group>"; };
+		D67F52491C8099860091149A /* PanierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanierController.swift; sourceTree = "<group>"; };
+		D67F52511C80A5920091149A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		D67F52531C80A80E0091149A /* Repas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repas.swift; sourceTree = "<group>"; };
+		D67F52551C80AE1F0091149A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +87,14 @@
 			children = (
 				97721B6A1C6E260600ED4914 /* AppDelegate.swift */,
 				97721B6C1C6E260600ED4914 /* ViewController.swift */,
+				D67F52491C8099860091149A /* PanierController.swift */,
 				97721B6E1C6E260600ED4914 /* Main.storyboard */,
 				97721B711C6E260600ED4914 /* Images.xcassets */,
 				97721B731C6E260600ED4914 /* LaunchScreen.xib */,
 				97721B681C6E260600ED4914 /* Supporting Files */,
+				D67F52511C80A5920091149A /* MenuTableViewCell.swift */,
+				D67F52531C80A80E0091149A /* Repas.swift */,
+				D67F52551C80AE1F0091149A /* MenuTableViewController.swift */,
 			);
 			path = ProjetRapidoRestoIOS;
 			sourceTree = "<group>";
@@ -213,6 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				97721B6D1C6E260600ED4914 /* ViewController.swift in Sources */,
+				D67F524A1C8099860091149A /* PanierController.swift in Sources */,
+				D67F52561C80AE1F0091149A /* MenuTableViewController.swift in Sources */,
+				D67F52541C80A80E0091149A /* Repas.swift in Sources */,
+				D67F52521C80A5920091149A /* MenuTableViewCell.swift in Sources */,
 				97721B6B1C6E260600ED4914 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +427,7 @@
 				97721B861C6E260700ED4914 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97721B871C6E260700ED4914 /* Build configuration list for PBXNativeTarget "ProjetRapidoRestoIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +436,7 @@
 				97721B891C6E260700ED4914 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
