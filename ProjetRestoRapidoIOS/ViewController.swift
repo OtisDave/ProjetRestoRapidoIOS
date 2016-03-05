@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtCourriel: UITextField!
     @IBOutlet weak var txtMdp: UITextField!
     
-    var Data: NSData? = nil
+    
     
 
     
@@ -30,10 +30,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnConnect(sender: AnyObject) {
-        if(txtCourriel.text != "" && txtMdp.text != ""){
-            Data = getJSON("https://www.googleapis.com/calendar/v3/calendars/calendarId")
-            if(Data != nil){
-                self.performSegueWithIdentifier("Menu", sender: nil)
+        var Data: NSData? = nil //contient le data JSON
+        
+        if(txtCourriel.text != "" && txtMdp.text != ""){ //Validation de champ non vide au login
+            Data = getJSON("https://www.googleapis.com/calendar/v3/calendars/calendarId") //si web à analyser
+            if(Data != nil){ //validation du data reçus
+                self.performSegueWithIdentifier("Menu", sender: nil) //affiche la page en Segue
             }
         }
     }
