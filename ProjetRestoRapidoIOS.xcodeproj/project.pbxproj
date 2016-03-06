@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF445E7E4D244A659A40D2EB /* Pods_ProjetRestoRapidoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F089F09913AD4CCB3A57F /* Pods_ProjetRestoRapidoIOS.framework */; };
+		FB14F50E1C8C8E0F007E1332 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FB14F50D1C8C8E0F007E1332 /* Podfile */; };
 		FB70E0201C866197005FA001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E01F1C866197005FA001 /* AppDelegate.swift */; };
 		FB70E0221C866197005FA001 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0211C866197005FA001 /* FirstViewController.swift */; };
 		FB70E0241C866197005FA001 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0231C866197005FA001 /* SecondViewController.swift */; };
@@ -20,6 +22,8 @@
 		FB70E0541C866538005FA001 /* PanierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0531C866538005FA001 /* PanierController.swift */; };
 		FB70E0561C86654A005FA001 /* Repas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0551C86654A005FA001 /* Repas.swift */; };
 		FB70E0581C86655E005FA001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0571C86655E005FA001 /* ViewController.swift */; };
+		FBF1BBB11C8C93A700934B0E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF1BBB01C8C93A700934B0E /* SwiftyJSON.framework */; };
+		FBF1BBB31C8C946C00934B0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FBF1BBB21C8C946C00934B0E /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0722283CE284EB43DFC9D1B0 /* Pods-ProjetRestoRapidoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetRestoRapidoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS.release.xcconfig"; sourceTree = "<group>"; };
+		E70F089F09913AD4CCB3A57F /* Pods_ProjetRestoRapidoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetRestoRapidoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE9E3C823F4CF92172D8F3D /* Pods-ProjetRestoRapidoIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetRestoRapidoIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FB14F50D1C8C8E0F007E1332 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ProjetRestoRapidoIOS/Podfile; sourceTree = "<group>"; };
 		FB70E01C1C866197005FA001 /* ProjetRestoRapidoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetRestoRapidoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB70E01F1C866197005FA001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB70E0211C866197005FA001 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 		FB70E0531C866538005FA001 /* PanierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanierController.swift; sourceTree = "<group>"; };
 		FB70E0551C86654A005FA001 /* Repas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repas.swift; sourceTree = "<group>"; };
 		FB70E0571C86655E005FA001 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBF1BBB01C8C93A700934B0E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		FBF1BBB21C8C946C00934B0E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF1BBB11C8C93A700934B0E /* SwiftyJSON.framework in Frameworks */,
+				AF445E7E4D244A659A40D2EB /* Pods_ProjetRestoRapidoIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,13 +98,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49F9E334E2919C80CB26B646 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFE9E3C823F4CF92172D8F3D /* Pods-ProjetRestoRapidoIOS.debug.xcconfig */,
+				0722283CE284EB43DFC9D1B0 /* Pods-ProjetRestoRapidoIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6AA087AADEA1BB01CE3CE7A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1BBB01C8C93A700934B0E /* SwiftyJSON.framework */,
+				E70F089F09913AD4CCB3A57F /* Pods_ProjetRestoRapidoIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB70E0131C866197005FA001 = {
 			isa = PBXGroup;
 			children = (
+				FB14F50D1C8C8E0F007E1332 /* Podfile */,
 				FB70E01E1C866197005FA001 /* ProjetRestoRapidoIOS */,
 				FB70E0351C866197005FA001 /* ProjetRestoRapidoIOSTests */,
 				FB70E0401C866197005FA001 /* ProjetRestoRapidoIOSUITests */,
 				FB70E01D1C866197005FA001 /* Products */,
+				49F9E334E2919C80CB26B646 /* Pods */,
+				6AA087AADEA1BB01CE3CE7A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,18 +142,19 @@
 		FB70E01E1C866197005FA001 /* ProjetRestoRapidoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FB70E0211C866197005FA001 /* FirstViewController.swift */,
+				FB70E0231C866197005FA001 /* SecondViewController.swift */,
 				FB70E0571C86655E005FA001 /* ViewController.swift */,
 				FB70E0551C86654A005FA001 /* Repas.swift */,
 				FB70E0531C866538005FA001 /* PanierController.swift */,
 				FB70E0511C866521005FA001 /* MenuTableViewController.swift */,
 				FB70E04F1C86650D005FA001 /* MenuTableViewCell.swift */,
 				FB70E01F1C866197005FA001 /* AppDelegate.swift */,
-				FB70E0211C866197005FA001 /* FirstViewController.swift */,
-				FB70E0231C866197005FA001 /* SecondViewController.swift */,
 				FB70E0251C866197005FA001 /* Main.storyboard */,
 				FB70E0281C866197005FA001 /* Assets.xcassets */,
 				FB70E02A1C866197005FA001 /* LaunchScreen.storyboard */,
 				FB70E02D1C866197005FA001 /* Info.plist */,
+				FBF1BBB21C8C946C00934B0E /* Podfile */,
 			);
 			path = ProjetRestoRapidoIOS;
 			sourceTree = "<group>";
@@ -150,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB70E0461C866197005FA001 /* Build configuration list for PBXNativeTarget "ProjetRestoRapidoIOS" */;
 			buildPhases = (
+				44FFF93FB337C181AE9FF83A /* Check Pods Manifest.lock */,
 				FB70E0181C866197005FA001 /* Sources */,
 				FB70E0191C866197005FA001 /* Frameworks */,
 				FB70E01A1C866197005FA001 /* Resources */,
+				4355E11EA13788B74FF43D80 /* Embed Pods Frameworks */,
+				78E0B44EDCED315872B44F91 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,8 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF1BBB31C8C946C00934B0E /* Podfile in Resources */,
 				FB70E02C1C866197005FA001 /* LaunchScreen.storyboard in Resources */,
 				FB70E0291C866197005FA001 /* Assets.xcassets in Resources */,
+				FB14F50E1C8C8E0F007E1332 /* Podfile in Resources */,
 				FB70E0271C866197005FA001 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +310,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4355E11EA13788B74FF43D80 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44FFF93FB337C181AE9FF83A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78E0B44EDCED315872B44F91 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB70E0181C866197005FA001 /* Sources */ = {
@@ -424,8 +511,13 @@
 		};
 		FB70E0471C866197005FA001 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE9E3C823F4CF92172D8F3D /* Pods-ProjetRestoRapidoIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyJSON",
+				);
 				INFOPLIST_FILE = ProjetRestoRapidoIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FramcosVerreault.ProjetRestoRapidoIOS;
@@ -435,8 +527,13 @@
 		};
 		FB70E0481C866197005FA001 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0722283CE284EB43DFC9D1B0 /* Pods-ProjetRestoRapidoIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyJSON",
+				);
 				INFOPLIST_FILE = ProjetRestoRapidoIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FramcosVerreault.ProjetRestoRapidoIOS;
