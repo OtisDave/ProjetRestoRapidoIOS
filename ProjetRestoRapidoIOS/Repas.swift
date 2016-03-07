@@ -13,6 +13,7 @@ class Repas {
     
     var id : Int
     var nom : String = ""
+    var Image : UIImage = UIImage()
     var prix : float_t
     var description : String = ""
     var boBle : Bool
@@ -25,9 +26,9 @@ class Repas {
     var boSesame : Bool
     var boCrustace : Bool
     var boMollusque : Bool
-    var Image : UIImage = UIImage()
     
-    init(_Id : Int, _Nom : String,_Prix : float_t, _Description : String, _boBle : Bool, _boLait : Bool, _boOeuf : Bool, _boArachide : Bool, _boSoja : Bool, _boFruitCoque : Bool, _boPoisson : Bool, _boSesame : Bool, _boCrustace : Bool, _boMollusque : Bool,  _Image : UIImage){
+    
+    init(_Id : Int, _Nom : String,  _Image : UIImage, _Prix : float_t, _Description : String, _boBle : Bool, _boLait : Bool, _boOeuf : Bool, _boArachide : Bool, _boSoja : Bool, _boFruitCoque : Bool, _boPoisson : Bool, _boSesame : Bool, _boCrustace : Bool, _boMollusque : Bool){
         id = _Id
         nom = _Nom
         prix = _Prix

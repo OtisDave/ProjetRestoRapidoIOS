@@ -22,7 +22,7 @@ class MenuTableViewController : UITableViewController {
     }
     
     func parseJSON()-> JSON{
-        let jsonData = NSData(contentsOfFile: "/Users/device/Downloads/tarlouse2.txt") as NSData!
+        let jsonData = NSData(contentsOfFile: "/Users/device/Downloads/avecpick.txt") as NSData!
         let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
         
         /*Pour la version avec url
@@ -52,7 +52,19 @@ class MenuTableViewController : UITableViewController {
         
         for(var i : Int = 0; i < readableJSON.count ; i++)
         {
-            repas += [Repas(_Id: readableJSON[i][0].int!, _Nom: readableJSON[i][1].string!, _Prix: readableJSON[i][2].float!, _Description: readableJSON[i][3].string!, _boBle: readableJSON[i][4].bool!, _boLait: readableJSON[i][5].bool!, _boOeuf: readableJSON[i][6].bool!, _boArachide: readableJSON[i][7].bool!, _boSoja: readableJSON[i][8].bool!, _boFruitCoque: readableJSON[i][9].bool!, _boPoisson: readableJSON[i][9].bool!, _boSesame: readableJSON[i][10].bool!, _boCrustace: readableJSON[i][11].bool!, _boMollusque: readableJSON[i][12].bool!, _Image: UIImage(named: "Spag")!)]
+            var base64String = readableJSON[i][2].stringValue
+            var imageString = base64String as NSString
+            //base64 string to NSData
+            let decodedData = NSData(base64EncodedString: imageString as String, options: NSDataBase64DecodingOptions(rawValue: 0))
+            
+            //NSData to UIImage
+            var decodedImage = UIImage(data: decodedData!)
+            if(decodedImage == nil)
+            {
+                decodedImage = UIImage(named: "images")
+            }
+            
+            repas += [Repas(_Id: readableJSON[i][0].int!, _Nom: readableJSON[i][1].string!, _Image: decodedImage!, _Prix: readableJSON[i][3].float!, _Description: readableJSON[i][4].string!, _boBle: readableJSON[i][5].bool!, _boLait: readableJSON[i][6].bool!, _boOeuf: readableJSON[i][7].bool!, _boArachide: readableJSON[i][8].bool!, _boSoja: readableJSON[i][9].bool!, _boFruitCoque: readableJSON[i][10].bool!, _boPoisson: readableJSON[i][11].bool!, _boSesame: readableJSON[i][12].bool!, _boCrustace: readableJSON[i][13].bool!, _boMollusque: readableJSON[i][14].bool!)]
         }
     }
     
