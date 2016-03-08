@@ -9,12 +9,11 @@
 import UIKit
 
 class MenuTableViewCell: UITableViewCell {
-    
-    
-
+    var id : Int = 0
     @IBOutlet weak var LblTitre: UILabel!
     @IBOutlet weak var TxtDescription: UITextView!
     @IBOutlet weak var ImgRepas: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +24,4 @@ class MenuTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
-    
-    
-    
-    
-    
-    
 }

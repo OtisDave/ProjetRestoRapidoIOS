@@ -44,5 +44,6 @@ class ViewController: UIViewController {
     //Pour obtenir le json
     func getJSON(urlToRequest: String) -> NSData{
         return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
-    }}
+    }
+}
 

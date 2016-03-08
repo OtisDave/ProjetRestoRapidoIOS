@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 
-class Repas {
+public class Repas {
     
     var id : Int
     var nom : String = ""
     var Image : UIImage = UIImage()
     var prix : float_t
     var description : String = ""
+    
     var boBle : Bool
     var boLait : Bool
     var boOeuf : Bool

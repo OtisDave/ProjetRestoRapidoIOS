@@ -22,6 +22,10 @@
 		FB70E0541C866538005FA001 /* PanierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0531C866538005FA001 /* PanierController.swift */; };
 		FB70E0561C86654A005FA001 /* Repas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0551C86654A005FA001 /* Repas.swift */; };
 		FB70E0581C86655E005FA001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E0571C86655E005FA001 /* ViewController.swift */; };
+		FB769EA11C8F67A6002EE0EE /* RepasPanier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB769EA01C8F67A6002EE0EE /* RepasPanier.swift */; };
+		FBB622CB1C8F7CCC0062D69C /* PanierTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB622CA1C8F7CCC0062D69C /* PanierTableViewCell.swift */; };
+		FBC6DA2F1C8F165500503893 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6DA2E1C8F165500503893 /* CreationViewController.swift */; };
+		FBC6DA331C8F276B00503893 /* DetailsRepasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6DA321C8F276B00503893 /* DetailsRepasViewController.swift */; };
 		FBF1BBB11C8C93A700934B0E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF1BBB01C8C93A700934B0E /* SwiftyJSON.framework */; };
 		FBF1BBB31C8C946C00934B0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FBF1BBB21C8C946C00934B0E /* Podfile */; };
 /* End PBXBuildFile section */
@@ -67,6 +71,10 @@
 		FB70E0531C866538005FA001 /* PanierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanierController.swift; sourceTree = "<group>"; };
 		FB70E0551C86654A005FA001 /* Repas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repas.swift; sourceTree = "<group>"; };
 		FB70E0571C86655E005FA001 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB769EA01C8F67A6002EE0EE /* RepasPanier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepasPanier.swift; sourceTree = "<group>"; };
+		FBB622CA1C8F7CCC0062D69C /* PanierTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanierTableViewCell.swift; sourceTree = "<group>"; };
+		FBC6DA2E1C8F165500503893 /* CreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
+		FBC6DA321C8F276B00503893 /* DetailsRepasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsRepasViewController.swift; sourceTree = "<group>"; };
 		FBF1BBB01C8C93A700934B0E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		FBF1BBB21C8C946C00934B0E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,19 +150,23 @@
 		FB70E01E1C866197005FA001 /* ProjetRestoRapidoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FBC6DA321C8F276B00503893 /* DetailsRepasViewController.swift */,
+				FBC6DA2E1C8F165500503893 /* CreationViewController.swift */,
 				FB70E0211C866197005FA001 /* FirstViewController.swift */,
 				FB70E0231C866197005FA001 /* SecondViewController.swift */,
 				FB70E0571C86655E005FA001 /* ViewController.swift */,
 				FB70E0551C86654A005FA001 /* Repas.swift */,
 				FB70E0531C866538005FA001 /* PanierController.swift */,
-				FB70E0511C866521005FA001 /* MenuTableViewController.swift */,
 				FB70E04F1C86650D005FA001 /* MenuTableViewCell.swift */,
 				FB70E01F1C866197005FA001 /* AppDelegate.swift */,
+				FB70E0511C866521005FA001 /* MenuTableViewController.swift */,
 				FB70E0251C866197005FA001 /* Main.storyboard */,
 				FB70E0281C866197005FA001 /* Assets.xcassets */,
 				FB70E02A1C866197005FA001 /* LaunchScreen.storyboard */,
 				FB70E02D1C866197005FA001 /* Info.plist */,
 				FBF1BBB21C8C946C00934B0E /* Podfile */,
+				FB769EA01C8F67A6002EE0EE /* RepasPanier.swift */,
+				FBB622CA1C8F7CCC0062D69C /* PanierTableViewCell.swift */,
 			);
 			path = ProjetRestoRapidoIOS;
 			sourceTree = "<group>";
@@ -366,11 +378,15 @@
 			files = (
 				FB70E0241C866197005FA001 /* SecondViewController.swift in Sources */,
 				FB70E0201C866197005FA001 /* AppDelegate.swift in Sources */,
+				FBC6DA2F1C8F165500503893 /* CreationViewController.swift in Sources */,
+				FB769EA11C8F67A6002EE0EE /* RepasPanier.swift in Sources */,
 				FB70E0521C866521005FA001 /* MenuTableViewController.swift in Sources */,
 				FB70E0561C86654A005FA001 /* Repas.swift in Sources */,
 				FB70E0501C86650D005FA001 /* MenuTableViewCell.swift in Sources */,
+				FBC6DA331C8F276B00503893 /* DetailsRepasViewController.swift in Sources */,
 				FB70E0541C866538005FA001 /* PanierController.swift in Sources */,
 				FB70E0581C86655E005FA001 /* ViewController.swift in Sources */,
+				FBB622CB1C8F7CCC0062D69C /* PanierTableViewCell.swift in Sources */,
 				FB70E0221C866197005FA001 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
