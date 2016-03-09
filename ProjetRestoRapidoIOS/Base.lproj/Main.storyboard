@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DY-wB-0yB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DY-wB-0yB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -62,6 +62,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z01-f0-Wbe">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="KnU-B9-4zM" kind="show" id="QoJ-Gf-Kgp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -127,6 +134,196 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTf-lC-eGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1420" y="1272"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ReR-eG-qmm">
+            <objects>
+                <tableViewController id="Gg5-d6-Hxf" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0MD-ec-hCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gR6-d9-tzp">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gR6-d9-tzp" id="VT3-bo-xNB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="hiP-jZ-v5M">
+                                <rect key="frame" x="0.0" y="72" width="320" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hiP-jZ-v5M" id="uzF-WN-CbI">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GaV-sy-pYr">
+                                            <rect key="frame" x="8" y="8" width="113" height="89"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYi-rx-aiC" customClass="FloatRatingView" customModule="ProjetRestoRapidoIOS" customModuleProvider="target">
+                                            <rect key="frame" x="129" y="51" width="183" height="46"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="k9E-nU-6xb"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StarEmpty"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StarFull"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom_Repas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fR-3m-fUe">
+                                            <rect key="frame" x="129" y="8" width="183" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CM8-55-aa8">
+                                            <rect key="frame" x="8" y="105" width="304" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVR-h8-k0h">
+                                            <rect key="frame" x="8" y="141" width="304" height="30"/>
+                                            <state key="normal" title="Enregistrer"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gg5-d6-Hxf" id="8wt-kG-QPa"/>
+                            <outlet property="delegate" destination="Gg5-d6-Hxf" id="sIA-gp-jM5"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ou6-nE-bax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1076" y="92"/>
+        </scene>
+        <!--Repas Commande Controller-->
+        <scene sceneID="dy6-Pm-K1h">
+            <objects>
+                <viewController id="KnU-B9-4zM" customClass="RepasCommandeController" customModule="ProjetRestoRapidoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3yX-er-aam"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Q5-Hh-MpG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oNh-fk-5TO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRg-wq-TKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="565"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="TgI-Cp-Dkr">
+            <objects>
+                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7iM-TW-2ht" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdT-GX-8Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="565"/>
+        </scene>
+        <!--Page Item Controller-->
+        <scene sceneID="cK4-bv-sW7">
+            <objects>
+                <viewController storyboardIdentifier="ItemController" id="X3E-kO-KL6" customClass="PageItemController" customModule="ProjetRestoRapidoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="byu-Nj-mTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="w0m-78-AHd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V3j-tO-tbP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-4t-W5E">
+                                <rect key="frame" x="20" y="28" width="280" height="222"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Z3-L6-Vsr" customClass="FloatRatingView" customModule="ProjetRestoRapidoIOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="321" width="280" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="U5k-on-DLm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StarEmpty"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StarFull"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nom_Repas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDk-Pj-Avo">
+                                <rect key="frame" x="20" y="266" width="280" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Commentaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ka-iF-XC9">
+                                <rect key="frame" x="20" y="390" width="280" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUF-t1-pl5">
+                                <rect key="frame" x="20" y="428" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-vF-mml">
+                                <rect key="frame" x="20" y="484" width="280" height="30"/>
+                                <state key="normal" title="Enregistrer"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Z3-L6-Vsr" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="E7Q-3I-5VW"/>
+                            <constraint firstItem="BDk-Pj-Avo" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="HaC-mf-nlC"/>
+                            <constraint firstItem="KUF-t1-pl5" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="KPf-gZ-ko9"/>
+                            <constraint firstItem="1Ka-iF-XC9" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="W9M-Lm-Of2"/>
+                            <constraint firstItem="iZJ-4t-W5E" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="mPq-cg-Mkc"/>
+                            <constraint firstItem="3mu-vF-mml" firstAttribute="centerX" secondItem="V3j-tO-tbP" secondAttribute="centerX" id="oZk-Gc-vn7"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="ImgRepas" destination="iZJ-4t-W5E" id="9Ey-Ny-wJ0"/>
+                        <outlet property="LblNom" destination="BDk-Pj-Avo" id="ysj-3W-8tV"/>
+                        <outlet property="RateStar" destination="5Z3-L6-Vsr" id="Kfd-KG-eyt"/>
+                        <outlet property="Star1" destination="5Z3-L6-Vsr" id="d8i-hV-kB5"/>
+                        <outlet property="TxtCommentaire" destination="KUF-t1-pl5" id="Rx8-0c-xGM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxD-QD-tzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="1179"/>
         </scene>
         <!--Le menu-->
         <scene sceneID="42k-Ot-bef">
@@ -674,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ho9-9I-gyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="285"/>
+            <point key="canvasLocation" x="-526" y="-351"/>
         </scene>
         <!--Panier-->
         <scene sceneID="tKx-RY-jZp">
@@ -763,6 +960,8 @@
     </scenes>
     <resources>
         <image name="6af2c76c-314b-417c-b21e-88d892323c20_ORIGINAL" width="1200" height="856"/>
+        <image name="StarEmpty" width="22" height="22"/>
+        <image name="StarFull" width="22" height="22"/>
         <image name="add-to-cart" width="16" height="16"/>
         <image name="assiette" width="500" height="382"/>
         <image name="knife-and-fork-2" width="16" height="16"/>
@@ -770,7 +969,7 @@
         <image name="wallet" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="T2W-ix-fwW"/>
         <segue reference="pCV-X5-qgo"/>
-        <segue reference="5gv-Hj-74W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,7 +34,7 @@ public class MenuTableViewController : UITableViewController {
     }
     
     func parseJSON()-> JSON{
-        let jsonData = NSData(contentsOfFile: "/Users/device/Downloads/avecpick.txt") as NSData!
+        let jsonData = NSData(contentsOfFile: "/Users/Francis/Downloads/avecpick.txt") as NSData!
         let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
         
         /*Pour la version avec url
