@@ -28,8 +28,28 @@ public class Repas {
     var boCrustace : Bool
     var boMollusque : Bool
     
+    init(){
+        
+        id = 0
+        nom = ""
+        prix = 0.0
+        description = ""
+        boBle = false
+        boLait = false
+        boOeuf = false
+        boArachide = false
+        boSoja = false
+        boFruitCoque = false
+        boPoisson = false
+        boSesame = false
+        boCrustace = false
+        boMollusque = false
+        Image = UIImage()
+    }
     
     init(_Id : Int, _Nom : String,  _Image : UIImage, _Prix : float_t, _Description : String, _boBle : Bool, _boLait : Bool, _boOeuf : Bool, _boArachide : Bool, _boSoja : Bool, _boFruitCoque : Bool, _boPoisson : Bool, _boSesame : Bool, _boCrustace : Bool, _boMollusque : Bool){
+        
+        
         id = _Id
         nom = _Nom
         prix = _Prix
@@ -46,4 +66,5 @@ public class Repas {
         boMollusque = _boMollusque
         Image = _Image
     }
+    
 }

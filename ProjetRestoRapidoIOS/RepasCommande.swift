@@ -26,4 +26,9 @@ public class RepasCommande : Repas {
         
         super.init(_Id: _Id, _Nom: _Nom, _Image: _Image, _Prix: _Prix, _Description: _Description, _boBle: _boBle, _boLait: _boLait, _boOeuf: _boOeuf, _boArachide: _boArachide, _boSoja: _boSoja, _boFruitCoque: _boFruitCoque, _boPoisson: _boPoisson, _boSesame: _boSesame, _boCrustace: _boCrustace, _boMollusque: _boMollusque)
     }
+    
+    override init() {
+        self.Commentaire = ""
+        super.init()
+    }
 }
