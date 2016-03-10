@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97AA76A01C921B46003275AF /* Utilisateurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA769F1C921B46003275AF /* Utilisateurs.swift */; };
+		97AA76A21C922A04003275AF /* ModifierCompteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */; };
 		AF445E7E4D244A659A40D2EB /* Pods_ProjetRestoRapidoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F089F09913AD4CCB3A57F /* Pods_ProjetRestoRapidoIOS.framework */; };
 		D6C1A5351C90A9AA009F0BB6 /* RepasCommande.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1A5341C90A9AA009F0BB6 /* RepasCommande.swift */; };
 		D6C1A5381C90B200009F0BB6 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1A5371C90B200009F0BB6 /* FloatRatingView.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0722283CE284EB43DFC9D1B0 /* Pods-ProjetRestoRapidoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetRestoRapidoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS.release.xcconfig"; sourceTree = "<group>"; };
 		97AA769F1C921B46003275AF /* Utilisateurs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilisateurs.swift; path = ../../../Downloads/Utilisateurs.swift; sourceTree = "<group>"; };
+		97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifierCompteViewController.swift; sourceTree = "<group>"; };
 		D6C1A5341C90A9AA009F0BB6 /* RepasCommande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepasCommande.swift; sourceTree = "<group>"; };
 		D6C1A5371C90B200009F0BB6 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		D6C1A5391C90B90B009F0BB6 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				FBB622CA1C8F7CCC0062D69C /* PanierTableViewCell.swift */,
 				D6C1A5341C90A9AA009F0BB6 /* RepasCommande.swift */,
 				D6C1A53B1C90C0FA009F0BB6 /* RepasCommandeController.swift */,
+				97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */,
 			);
 			path = ProjetRestoRapidoIOS;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				D6C1A53A1C90B90B009F0BB6 /* PageItemController.swift in Sources */,
 				FBB622CB1C8F7CCC0062D69C /* PanierTableViewCell.swift in Sources */,
 				FB70E0221C866197005FA001 /* FirstViewController.swift in Sources */,
+				97AA76A21C922A04003275AF /* ModifierCompteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
