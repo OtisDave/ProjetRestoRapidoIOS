@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -16,30 +17,44 @@ class ViewController: UIViewController {
     
     
     
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func btnConnect(sender: AnyObject) {
         var Data: NSData? = nil //contient le data JSON
         
         if(txtCourriel.text != "" && txtMdp.text != ""){ //Validation de champ non vide au login
-            Data = getJSON("https://www.googleapis.com/calendar/v3/calendars/calendarId") //si web à analyser
+            Data = getJSON("https://demo7680848.mockable.io/Login") //si web à analyser
             if(Data != nil){ //validation du data reçus
+                let readableJSON = JSON(data: Data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                
+                var arr: [AnyObject] = []
+                
+                for var i = 0; i < readableJSON.count; i++ {
+                    arr.append(readableJSON.arrayObject![i])
+                }
+                
+                let user = Utilisateurs(_Id: readableJSON.arrayObject![0] as! Int , _Type: readableJSON.arrayObject![1] as! NSString as String, _Prenom: readableJSON.arrayObject![2] as! NSString as String, _Nom: readableJSON.arrayObject![3] as! NSString as String, _Usager: readableJSON.arrayObject![4] as! NSString as String, _ble: readableJSON.arrayObject![5] as! Bool, _lait: readableJSON.arrayObject![6] as! Bool, _Oeuf: readableJSON.arrayObject![7] as! Bool, _Arachide: readableJSON.arrayObject![8] as! Bool, _Soja: readableJSON.arrayObject![9] as! Bool, _Coque: readableJSON.arrayObject![10] as! Bool, _Poisson: readableJSON.arrayObject![11] as! Bool, _Sesame: readableJSON.arrayObject![12] as! Bool, _Crustace: readableJSON.arrayObject![13] as! Bool, _Molusque: readableJSON.arrayObject![14] as! Bool)
+                
+                
+                
+                
+                
+                
                 self.performSegueWithIdentifier("Menu", sender: nil) //affiche la page en Segue
             }
         }
     }
-    
     
     //Pour obtenir le json
     func getJSON(urlToRequest: String) -> NSData{
