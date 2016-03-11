@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CreationViewController : UITableViewController {
+class CreationViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
