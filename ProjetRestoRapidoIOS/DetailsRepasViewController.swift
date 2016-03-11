@@ -73,13 +73,13 @@ public class DetailsRepasViewController : UIViewController {
     @IBAction func AjouterPanierClick(sender: AnyObject) {
         var temp : Int = -1
         for (var i : Int = 0; i < PanierController.panier.count; i++) {
-            if (PanierController.panier[i].id == toPass) {
+            if (PanierController.panier[i].id == MenuTableViewController.repas[toPass].id) {
                 temp = i
             }
         }
         
-        if (temp != -1) {
-            PanierController.panier += [RepasPanier(_Id: MenuTableViewController.repas[temp].id, _Nom: MenuTableViewController.repas[temp].nom, _Image: MenuTableViewController.repas[temp].Image, _Prix: MenuTableViewController.repas[temp].prix, _Description: MenuTableViewController.repas[temp].description, _boBle: MenuTableViewController.repas[temp].boBle, _boLait: MenuTableViewController.repas[temp].boLait, _boOeuf: MenuTableViewController.repas[temp].boOeuf, _boArachide: MenuTableViewController.repas[temp].boArachide, _boSoja: MenuTableViewController.repas[temp].boSoja, _boFruitCoque: MenuTableViewController.repas[temp].boFruitCoque, _boPoisson: MenuTableViewController.repas[temp].boPoisson, _boSesame: MenuTableViewController.repas[temp].boSesame, _boCrustace: MenuTableViewController.repas[temp].boCrustace, _boMollusque: MenuTableViewController.repas[temp].boMollusque, _qte: Int(lblqte.text!)!)]
+        if (temp == -1) {
+            PanierController.panier += [RepasPanier(_Id: MenuTableViewController.repas[toPass].id, _Nom: MenuTableViewController.repas[toPass].nom, _Image: MenuTableViewController.repas[toPass].Image, _Prix: MenuTableViewController.repas[toPass].prix, _Description: MenuTableViewController.repas[toPass].description, _boBle: MenuTableViewController.repas[toPass].boBle, _boLait: MenuTableViewController.repas[toPass].boLait, _boOeuf: MenuTableViewController.repas[toPass].boOeuf, _boArachide: MenuTableViewController.repas[toPass].boArachide, _boSoja: MenuTableViewController.repas[toPass].boSoja, _boFruitCoque: MenuTableViewController.repas[toPass].boFruitCoque, _boPoisson: MenuTableViewController.repas[toPass].boPoisson, _boSesame: MenuTableViewController.repas[toPass].boSesame, _boCrustace: MenuTableViewController.repas[toPass].boCrustace, _boMollusque: MenuTableViewController.repas[toPass].boMollusque, _qte: Int(lblqte.text!)!)]
         }
         else {
             PanierController.panier[temp].Qte += Int(lblqte.text!)!
