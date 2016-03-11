@@ -8,14 +8,21 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 public class DetailsRepasViewController : UIViewController {
+    @IBOutlet weak var lblCote: UILabel!
     @IBOutlet weak var txtdescription: UITextView!
     @IBOutlet weak var lblqte: UILabel!
     @IBOutlet weak var lblprix: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var topBar: UINavigationBar!
     var toPass:Int = 0
+    
+    //Pour obtenir le json
+    func getJSON(urlToRequest: String) -> NSData{
+        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+    }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +75,37 @@ public class DetailsRepasViewController : UIViewController {
         lblprix.text = String(MenuTableViewController.repas[toPass].prix)
         txtdescription.text = MenuTableViewController.repas[toPass].description
         image.image = MenuTableViewController.repas[toPass].Image
+        
+        var alergie : String = ""
+        
+        if((ViewController.user?.Ble) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Lait) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Oeuf) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Arachide) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Soja) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Coque) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Poisson) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Sesame) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Crustace) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Molusque) != nil){ alergie += "1"}else{alergie += "0"}
+        
+        var cote : Int = 0
+        var nbcote : Int = 0
+        var jsonData: NSData? = nil //contient le data JSON
+        jsonData = getJSON("https://projetrestorapidoc.azurewebsites.net/api/CmdRepas/" + alergie)
+        let readableJSON = JSON(data:jsonData!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        for (var i : Int = 0; i < readableJSON.count; i++)
+        {
+            if(readableJSON[i][4].int == MenuTableViewController.repas[toPass].id)
+            {
+                cote += readableJSON[i][3].int!
+                nbcote += 1
+            }
+        }
+        lblCote.text = "Cote sur 5: " + String(cote/nbcote)
+    
+        
     }
     
     @IBAction func AjouterPanierClick(sender: AnyObject) {

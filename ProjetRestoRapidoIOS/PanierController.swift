@@ -36,6 +36,10 @@ public class PanierController : UITableViewController {
         
             var Data: NSData? = nil //contient le data JSON
             Data = getJSON(url) //si web à analyser
+            PanierController.panier.removeAll()
+            lstRepasPanier.reloadData()
+            lblPrixTotal.text = "Prix Total: "
+
         }
     }
     
@@ -84,6 +88,7 @@ public class PanierController : UITableViewController {
     
     override public func viewDidAppear(animated: Bool) {
         cmdSupprimer.enabled = false
+        viewDidLoad()
     }
     
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

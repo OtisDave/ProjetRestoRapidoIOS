@@ -22,6 +22,11 @@ public class MenuTableViewController : UITableViewController {
         loadSimpleRepas()
     }
     
+    //Pour obtenir le json
+    func getJSON(urlToRequest: String) -> NSData{
+        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+    }
+    
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "linkMenuDetails") {
             let svc = segue.destinationViewController as! DetailsRepasViewController;
@@ -34,27 +39,22 @@ public class MenuTableViewController : UITableViewController {
     }
     
     func parseJSON()-> JSON{
-        let jsonData = NSData(contentsOfFile: "/Users/Prof/Downloads/avecpick.txt") as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        var alergie : String = ""
         
-        /*Pour la version avec url
-        var readableJSON : JSON = nil
-        let url = NSURL(string: "azure")
-        let request = NSURLRequest(URL: url!)
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-            
-            if error == nil{
-                var readableJSON = JSON(data: data!)
-                NSLog("\(readableJSON)")
+        if((ViewController.user?.Ble) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Lait) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Oeuf) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Arachide) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Soja) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Coque) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Poisson) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Sesame) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Crustace) != nil){ alergie += "1"}else{alergie += "0"}
+        if((ViewController.user?.Molusque) != nil){ alergie += "1"}else{alergie += "0"}
         
-            }
-            else
-            {
-                print("error")
-            }
-        }*/
-        /*task.resume()*/
+        var jsonData: NSData? = nil //contient le data JSON
+        jsonData = getJSON("https://projetrestorapidoc.azurewebsites.net/api/ApiRepas/" + alergie)
+        let readableJSON = JSON(data:jsonData!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         
         return readableJSON
     }
