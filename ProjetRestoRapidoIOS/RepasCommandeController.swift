@@ -14,19 +14,26 @@ class RepasCommandeController :  UIViewController , UIPageViewControllerDataSour
     // MARK: - Variables
     private var pageViewController: UIPageViewController?
     var CmdID : Int = 0
+    private var contentImages : [RepasCommande] = [RepasCommande]()
     
     // Initialize it right away here
     
-    private let contentImages : [RepasCommande] = [
-        
-        /*RepasCommande( _Id: 0, _Nom : "Pizza",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : ""),
-        
-        RepasCommande( _Id: 0, _Nom : "Spag",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : ""),
-        
-        RepasCommande( _Id: 0, _Nom : "Poutine",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : "")*/
-    ]
+    
+    
+    
+    
     
     override func viewDidLoad() {
+        
+        for (var i : Int = 0; i < CCommandeViewController.cmd.count; i++)
+        {
+            if(CCommandeViewController.cmd[i].cmdId == CmdID)
+            {
+                contentImages = CCommandeViewController.cmd[i].cmdLst
+                break;
+            }
+        }
+        
         super.viewDidLoad()
         createPageViewController()
         setupPageControl()

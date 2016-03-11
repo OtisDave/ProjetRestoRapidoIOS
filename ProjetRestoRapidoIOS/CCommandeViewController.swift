@@ -25,9 +25,29 @@ public class CCommandeViewController: UITableViewController
         loadCommandes()
     }
     
+    
+    
+    
+    //Pour obtenir le json
+    func getJSON(urlToRequest: String) -> NSData{
+        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+    }
+    
     func parseJSON()-> JSON{
-        let jsonData = NSData(contentsOfFile: "/Users/Prof/Downloads/TestCommandesPourIOs.txt") as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        var Data: NSData? = nil //contient le data JSON
+        var readableJSON : JSON = nil
+        Data = getJSON("https://projetrestorapidoc.azurewebsites.net/API/APICommandes/3")
+        //+ String(ViewController.user!.ID)) //si web à analyser
+        if(Data != nil){ //validation du data reçus
+            readableJSON = JSON(data: Data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+            
+        }
+        
+        
+        
+        // let jsonData = NSData(contentsOfFile: "/Users/Prof/Downloads/TestCommandesPourIOs.txt") as NSData!
+        //  let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
         
         /*Pour la version avec url
         var readableJSON : JSON = nil
@@ -68,29 +88,28 @@ public class CCommandeViewController: UITableViewController
         if(CCommandeViewController.cmd.count == 0)
         {
             
-            //var readableJSON = parseJSON()
+            var readableJSON = parseJSON()
             var lstRepas : [RepasCommande] = [RepasCommande]()
             
+            /*
+            lstRepas += [RepasCommande(_Id: 1, _Commentaires: "dedede", _Etoiles: 4, _cmdRepas: 1,_cmd: 1)]
             
-             lstRepas += [RepasCommande(_Id: 1, _Commentaires: "dedede", _Etoiles: 4, _cmdRepas: 1,_cmd: 1)]
-            
-            CCommandeViewController.cmd += [CCommande(_Id: 1, _status: 1, _Prix: 2.22, _PrixTaxe: 2.40, _Date: "3333/33/33", _lstRepas: lstRepas)]
+            CCommandeViewController.cmd += [CCommande(_Id: 1, _status: 1, _Prix: 2.22, _PrixTaxe: 2.40, _Date: "3333/33/33", _lstRepas: lstRepas)]*/
             
             
             
-         /*
-      //      var coucou = readableJSON.count
+            
+            //      var coucou = readableJSON.count
             for(var i : Int = 0; i < readableJSON.count; i++)
             {
                 lstRepas = [RepasCommande]()
                 
+                // var coucou1 = readableJSON.rawData()
                 
-        //        var coucou1 = readableJSON[i]
-                
-                for (var j : Int = 0; j < readableJSON[i][5].count; j++)
+                for (var j : Int = 0; j < readableJSON[i]["mCmdColletionRepas"].count; j++)
                 {
                     
-                    lstRepas += [RepasCommande(_Id: readableJSON[i][2][j][0].int!, _Commentaires: readableJSON[i][2][j][1].string!, _Etoiles: readableJSON[i][2][j][2].int!, _cmdRepas: readableJSON[i][2][j][3].int!,_cmd: readableJSON[i][0].int!)]
+                    lstRepas += [RepasCommande(_Id: readableJSON[i]["mCmdColletionRepas"][j]["m_iRepasId"].int!, _Commentaires: readableJSON[i]["mCmdColletionRepas"][j]["mCommentaire"].string!, _Etoiles: readableJSON[i]["mCmdColletionRepas"][j]["mEtoiles"].int!, _cmdRepas: readableJSON[i]["mCmdColletionRepas"][j]["mCmdRepID"].int!,_cmd: readableJSON[i]["mCmdColletionRepas"][j]["mCmdID"].int!)]
                     
                 }
                 
@@ -98,10 +117,10 @@ public class CCommandeViewController: UITableViewController
                 
                 
                 
-                CCommandeViewController.cmd += [CCommande(_Id: readableJSON[i][0].int!, _status: readableJSON[i][1].int!, _Prix: readableJSON[i][2].float!, _PrixTaxe: readableJSON[i][3].float!, _Date: String(readableJSON[i][4]), _lstRepas : lstRepas)]
+                CCommandeViewController.cmd += [CCommande(_Id: readableJSON[i]["mCmdID"].int!, _status: readableJSON[i]["mCmdStatusCommande"].int!, _Prix: readableJSON[i]["mCmdPrixAvantTaxes"].float!, _PrixTaxe: readableJSON[i]["mCmdPrixTotal"].float!, _Date: String(readableJSON[i]["mCmdDate"]), _lstRepas : lstRepas)]
             }
-
-                */
+            
+            
         }
     }
     
@@ -129,10 +148,13 @@ public class CCommandeViewController: UITableViewController
         cell.lblDate.text = commande.cmdDate
         cell.lblPrix.text = String(commande.cmdPrix)
         cell.lblPrixTaxe.text = String(commande.cmdPrixTaxe)
-
+        
         
         
         return cell
     }
+    
+    
+    
 }
 
