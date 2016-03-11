@@ -11,19 +11,13 @@ import UIKit
 public class CommandeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblDate: UILabel!
+    
     @IBOutlet weak var lblPrix: UILabel!
+    
     @IBOutlet weak var lblPrixTaxe: UILabel!
     
-    @IBAction func btnVueNotes(sender: AnyObject)
-    {
-        
-        
-        
-        
-        
-    }
-    
-    
+    var CmdId : Int = 0
+
     
     override public func awakeFromNib() {
         super.awakeFromNib()

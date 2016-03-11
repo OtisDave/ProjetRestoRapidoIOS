@@ -13,6 +13,7 @@ class RepasCommandeController :  UIViewController , UIPageViewControllerDataSour
     
     // MARK: - Variables
     private var pageViewController: UIPageViewController?
+    var CmdID : Int = 0
     
     // Initialize it right away here
     

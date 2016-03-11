@@ -24,7 +24,7 @@ public class RepasCommande : Repas {
         nbEtoiles = _Etoiles
         cmdId = _cmd
         cmdRepascmdID = _cmdRepas
-        while(Trouve || (MenuTableViewController.repas.count > i))
+        while(Trouve || ((MenuTableViewController.repas.count - 1) > i))
         {
             Trouve = MenuTableViewController.repas[i].id == _Id
             i++

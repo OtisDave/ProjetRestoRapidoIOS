@@ -109,7 +109,7 @@
                         <segue destination="0pa-kB-RzC" kind="relationship" relationship="viewControllers" id="szU-iG-T9C"/>
                         <segue destination="FRB-ZE-Lyi" kind="relationship" relationship="viewControllers" id="bzl-Qr-T8a"/>
                         <segue destination="r0C-C8-F1x" kind="relationship" relationship="viewControllers" id="irc-bb-AVD"/>
-                        <segue destination="t6o-bH-X1b" kind="relationship" relationship="viewControllers" id="BJT-TL-tSY"/>
+                        <segue destination="qcU-ag-XbY" kind="relationship" relationship="viewControllers" id="FOG-eK-0Qo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -117,9 +117,77 @@
             <point key="canvasLocation" x="652" y="-52"/>
         </scene>
         <!--Facture-->
+        <scene sceneID="qme-I6-H7G">
+            <objects>
+                <tableViewController id="qcU-ag-XbY" customClass="CCommandeViewController" customModule="ProjetRestoRapidoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FNL-mk-TGp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommandeTableViewCell" selectionStyle="default" indentationWidth="10" id="mqf-oF-1sm" customClass="CommandeTableViewCell" customModule="ProjetRestoRapidoIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqf-oF-1sm" id="MXR-KT-VPe">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommandeTableViewCell" rowHeight="52" id="JaY-x4-xYp" customClass="CommandeTableViewCell" customModule="ProjetRestoRapidoIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JaY-x4-xYp" id="3OC-a7-C3r">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf3-ZF-Wrb">
+                                            <rect key="frame" x="19" y="11" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQC-3g-152">
+                                            <rect key="frame" x="194" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov0-CW-UMv">
+                                            <rect key="frame" x="113" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblDate" destination="vf3-ZF-Wrb" id="xjT-IG-exK"/>
+                                    <outlet property="lblPrix" destination="ov0-CW-UMv" id="sXP-gt-usP"/>
+                                    <outlet property="lblPrixTaxe" destination="TQC-3g-152" id="e6D-lb-BHf"/>
+                                    <segue destination="KnU-B9-4zM" kind="show" identifier="LinkRating" id="MUT-SE-vPY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qcU-ag-XbY" id="0UB-TH-2NL"/>
+                            <outlet property="delegate" destination="qcU-ag-XbY" id="lBw-fx-4Eh"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Facture" image="wallet" id="GK5-Ed-rdM"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tableCell" destination="FNL-mk-TGp" id="VFG-mc-7nV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQh-te-ofU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="1310"/>
+        </scene>
+        <!--Facture-->
         <scene sceneID="gIz-GH-RoS">
             <objects>
-                <viewController id="t6o-bH-X1b" sceneMemberID="viewController">
+                <viewController id="t6o-bH-X1b" customClass="CCommandeViewController" customModule="ProjetRestoRapidoIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SSR-Gs-Imn"/>
                         <viewControllerLayoutGuide type="bottom" id="D2L-C8-qtn"/>
@@ -127,6 +195,12 @@
                     <view key="view" contentMode="scaleToFill" id="9VK-eo-aod">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ejW-oN-3R6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Facture" image="wallet" id="58A-u8-Nm5"/>
@@ -135,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTf-lC-eGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="1272"/>
+            <point key="canvasLocation" x="1420" y="1310"/>
         </scene>
         <!--Repas Commande Controller-->
         <scene sceneID="dy6-Pm-K1h">
@@ -945,6 +1019,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="T2W-ix-fwW"/>
-        <segue reference="pCV-X5-qgo"/>
+        <segue reference="2VV-CG-wZZ"/>
+        <segue reference="MUT-SE-vPY"/>
     </inferredMetricsTieBreakers>
 </document>
