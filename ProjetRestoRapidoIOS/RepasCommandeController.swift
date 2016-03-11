@@ -18,11 +18,11 @@ class RepasCommandeController :  UIViewController , UIPageViewControllerDataSour
     
     private let contentImages : [RepasCommande] = [
         
-        RepasCommande( _Id: 0, _Nom : "Pizza",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : ""),
+        /*RepasCommande( _Id: 0, _Nom : "Pizza",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : ""),
         
         RepasCommande( _Id: 0, _Nom : "Spag",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : ""),
         
-        RepasCommande( _Id: 0, _Nom : "Poutine",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : "")
+        RepasCommande( _Id: 0, _Nom : "Poutine",  _Image : UIImage(), _Prix : 50.0 , _Description : "Merveille ", _boBle : false, _boLait : false, _boOeuf : false, _boArachide : false, _boSoja : false, _boFruitCoque : false, _boPoisson : false, _boSesame : false, _boCrustace : false, _boMollusque : false, _commentaire : "")*/
     ]
     
     override func viewDidLoad() {

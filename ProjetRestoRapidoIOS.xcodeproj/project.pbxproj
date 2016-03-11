@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		97AA76A21C922A04003275AF /* ModifierCompteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */; };
+		97D6E2121C933F62009A3663 /* CCommande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6E2111C933F62009A3663 /* CCommande.swift */; };
+		97D6E2141C933F82009A3663 /* CCommandeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6E2131C933F82009A3663 /* CCommandeViewController.swift */; };
+		97D6E2161C933FA6009A3663 /* CommandeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6E2151C933FA6009A3663 /* CommandeTableViewCell.swift */; };
 		97F09DB21C93408100B055B0 /* Utilisateurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F09DB11C93408100B055B0 /* Utilisateurs.swift */; };
 		AF445E7E4D244A659A40D2EB /* Pods_ProjetRestoRapidoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F089F09913AD4CCB3A57F /* Pods_ProjetRestoRapidoIOS.framework */; };
 		D6C1A5351C90A9AA009F0BB6 /* RepasCommande.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1A5341C90A9AA009F0BB6 /* RepasCommande.swift */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		0722283CE284EB43DFC9D1B0 /* Pods-ProjetRestoRapidoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetRestoRapidoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetRestoRapidoIOS/Pods-ProjetRestoRapidoIOS.release.xcconfig"; sourceTree = "<group>"; };
 		97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifierCompteViewController.swift; sourceTree = "<group>"; };
+		97D6E2111C933F62009A3663 /* CCommande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCommande.swift; sourceTree = "<group>"; };
+		97D6E2131C933F82009A3663 /* CCommandeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCommandeViewController.swift; sourceTree = "<group>"; };
+		97D6E2151C933FA6009A3663 /* CommandeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandeTableViewCell.swift; sourceTree = "<group>"; };
 		97F09DB11C93408100B055B0 /* Utilisateurs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilisateurs.swift; sourceTree = "<group>"; };
 		D6C1A5341C90A9AA009F0BB6 /* RepasCommande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepasCommande.swift; sourceTree = "<group>"; };
 		D6C1A5371C90B200009F0BB6 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C1A5371C90B200009F0BB6 /* FloatRatingView.swift */,
+				97D6E2111C933F62009A3663 /* CCommande.swift */,
 			);
 			name = FloatRatingView;
 			sourceTree = "<group>";
@@ -193,6 +200,8 @@
 				D6C1A53B1C90C0FA009F0BB6 /* RepasCommandeController.swift */,
 				97AA76A11C922A04003275AF /* ModifierCompteViewController.swift */,
 				97F09DB11C93408100B055B0 /* Utilisateurs.swift */,
+				97D6E2131C933F82009A3663 /* CCommandeViewController.swift */,
+				97D6E2151C933FA6009A3663 /* CommandeTableViewCell.swift */,
 			);
 			path = ProjetRestoRapidoIOS;
 			sourceTree = "<group>";
@@ -404,16 +413,19 @@
 			files = (
 				FB70E0241C866197005FA001 /* SecondViewController.swift in Sources */,
 				FB70E0201C866197005FA001 /* AppDelegate.swift in Sources */,
+				97D6E2141C933F82009A3663 /* CCommandeViewController.swift in Sources */,
 				D6C1A5381C90B200009F0BB6 /* FloatRatingView.swift in Sources */,
 				FBC6DA2F1C8F165500503893 /* CreationViewController.swift in Sources */,
 				FB769EA11C8F67A6002EE0EE /* RepasPanier.swift in Sources */,
 				97F09DB21C93408100B055B0 /* Utilisateurs.swift in Sources */,
 				D6C1A5351C90A9AA009F0BB6 /* RepasCommande.swift in Sources */,
 				FB70E0521C866521005FA001 /* MenuTableViewController.swift in Sources */,
+				97D6E2161C933FA6009A3663 /* CommandeTableViewCell.swift in Sources */,
 				FB70E0561C86654A005FA001 /* Repas.swift in Sources */,
 				FB70E0501C86650D005FA001 /* MenuTableViewCell.swift in Sources */,
 				FBC6DA331C8F276B00503893 /* DetailsRepasViewController.swift in Sources */,
 				FB70E0541C866538005FA001 /* PanierController.swift in Sources */,
+				97D6E2121C933F62009A3663 /* CCommande.swift in Sources */,
 				D6C1A53C1C90C0FA009F0BB6 /* RepasCommandeController.swift in Sources */,
 				FB70E0581C86655E005FA001 /* ViewController.swift in Sources */,
 				D6C1A53A1C90B90B009F0BB6 /* PageItemController.swift in Sources */,

@@ -12,23 +12,25 @@ import UIKit
 public class RepasCommande : Repas {
     
     var Commentaire : String
+    var nbEtoiles : Int
+    var cmdId : Int
+    var cmdRepascmdID : Int
     
-    init(_Id : Int, _Nom : String,  _Image : UIImage, _Prix : float_t, _Description : String, _boBle : Bool, _boLait : Bool, _boOeuf : Bool, _boArachide : Bool, _boSoja : Bool, _boFruitCoque : Bool, _boPoisson : Bool, _boSesame : Bool, _boCrustace : Bool, _boMollusque : Bool, _commentaire : String) {
+    init(_Id : Int, _Commentaires : String, _Etoiles : Int, _cmdRepas : Int, _cmd : Int) {
         
-        Commentaire = _commentaire
+        Commentaire = _Commentaires
+        var Trouve:Bool = true
+        var i : Int = 0;
+        nbEtoiles = _Etoiles
+        cmdId = _cmd
+        cmdRepascmdID = _cmdRepas
+        while(Trouve || (MenuTableViewController.repas.count > i))
+        {
+            Trouve = MenuTableViewController.repas[i].id == _Id
+            i++
+        }
+        var LeRepas : Repas = MenuTableViewController.repas[i]
         
-        super.init(_Id: _Id, _Nom: _Nom, _Image: _Image, _Prix: _Prix, _Description: _Description, _boBle: _boBle, _boLait: _boLait, _boOeuf: _boOeuf, _boArachide: _boArachide, _boSoja: _boSoja, _boFruitCoque: _boFruitCoque, _boPoisson: _boPoisson, _boSesame: _boSesame, _boCrustace: _boCrustace, _boMollusque: _boMollusque)
-    }
-    
-    override init(_Id : Int, _Nom : String,  _Image : UIImage, _Prix : float_t, _Description : String, _boBle : Bool, _boLait : Bool, _boOeuf : Bool, _boArachide : Bool, _boSoja : Bool, _boFruitCoque : Bool, _boPoisson : Bool, _boSesame : Bool, _boCrustace : Bool, _boMollusque : Bool) {
-        
-        Commentaire = ""
-        
-        super.init(_Id: _Id, _Nom: _Nom, _Image: _Image, _Prix: _Prix, _Description: _Description, _boBle: _boBle, _boLait: _boLait, _boOeuf: _boOeuf, _boArachide: _boArachide, _boSoja: _boSoja, _boFruitCoque: _boFruitCoque, _boPoisson: _boPoisson, _boSesame: _boSesame, _boCrustace: _boCrustace, _boMollusque: _boMollusque)
-    }
-    
-    override init() {
-        self.Commentaire = ""
-        super.init()
+        super.init(_Id: LeRepas.id, _Nom: LeRepas.nom, _Image: LeRepas.Image, _Prix: LeRepas.prix, _Description: LeRepas.description, _boBle: LeRepas.boBle, _boLait: LeRepas.boLait, _boOeuf: LeRepas.boOeuf, _boArachide: LeRepas.boArachide, _boSoja: LeRepas.boSoja, _boFruitCoque: LeRepas.boFruitCoque, _boPoisson: LeRepas.boPoisson, _boSesame: LeRepas.boSesame, _boCrustace: LeRepas.boCrustace, _boMollusque: LeRepas.boMollusque)
     }
 }

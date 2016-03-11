@@ -9,11 +9,11 @@
 import UIKit
 
 class PageItemController: UIViewController {
-    
     // MARK: - Variables
     var itemIndex: Int = 0
     
-    var Repas : RepasCommande = RepasCommande()
+    var Repas : RepasCommande = RepasCommande( _Id: 0, _Commentaires: "bobobo", _Etoiles: 5, _cmdRepas: 1,
+        _cmd: 1)
     
     var imageName: String = ""
     var nomRepas : String = ""
